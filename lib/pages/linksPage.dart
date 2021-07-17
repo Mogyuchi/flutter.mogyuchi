@@ -128,56 +128,6 @@ class LinksScreen extends StatelessWidget {
                                 ),
                                 ElevatedButton(
                                   onPressed: () => _launchURL(
-                                      'https://line.me/ti/p/jVwQbGxkTs'),
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.white,
-                                    onPrimary: Colors.pink[100],
-                                    shadowColor: shadowYellow,
-                                    elevation: elevation,
-                                  ),
-                                  child: Container(
-                                    margin: EdgeInsets.all(3),
-                                    height: 70,
-                                    width: 200,
-                                    child: Row(
-                                      children: [
-                                        Container(
-                                          padding: EdgeInsets.all(14),
-                                          child: Image.asset(
-                                            'images/logos/LINE.png',
-                                            semanticLabel: 'LINE logo',
-                                          ),
-                                        ),
-                                        Container(
-                                          margin: EdgeInsets.all(2),
-                                          child: Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.spaceEvenly,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text(
-                                                  "LINE",
-                                                  style: TextStyle(
-                                                    fontSize: 20,
-                                                    color: Colors.black87,
-                                                  ),
-                                                ),
-                                                Text(
-                                                  "もぎゅち",
-                                                  style: TextStyle(
-                                                    fontSize: 15,
-                                                    color: Colors.black87,
-                                                  ),
-                                                ),
-                                              ]),
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                ElevatedButton(
-                                  onPressed: () => _launchURL(
                                       'https://twitter.com/Mogyuchi'),
                                   style: ElevatedButton.styleFrom(
                                     primary: Colors.white,
