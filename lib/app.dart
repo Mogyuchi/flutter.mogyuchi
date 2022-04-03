@@ -92,7 +92,7 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
     with ChangeNotifier, PopNavigatorRouterDelegateMixin<AppRoutePath> {
   final GlobalKey<NavigatorState> navigatorKey;
 
-  late String? _selectedPage;
+  late String _selectedPage = '';
   bool show404 = false;
 
   List<String> pages = ['introduction', 'randomFacts', 'skills', 'links'];
@@ -193,7 +193,7 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
         if (!route.didPop(result)) {
           return false;
         }
-        _selectedPage = null;
+        _selectedPage = '';
         show404 = false;
         notifyListeners();
 
@@ -205,7 +205,7 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
   @override
   Future<void> setNewRoutePath(AppRoutePath path) async {
     if (path.isUnknown) {
-      _selectedPage = null;
+      _selectedPage = '';
       show404 = true;
       return;
     }
@@ -219,7 +219,7 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
     } else if (path.isLinksPage) {
       _selectedPage = pages[3];
     } else {
-      _selectedPage = null;
+      _selectedPage = '';
     }
     show404 = false;
   }
@@ -231,7 +231,7 @@ class AppRouterDelegate extends RouterDelegate<AppRoutePath>
   }
 
   void _gobackHomePage(dynamic) {
-    _selectedPage = null;
+    _selectedPage = '';
     notifyListeners();
   }
 
